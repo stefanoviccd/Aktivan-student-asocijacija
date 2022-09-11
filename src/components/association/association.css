@@ -1,0 +1,75 @@
+.first-row, .second-row, .third-row, .fourth-row, .fifth-row{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    margin-top: 1%;
+}
+button{
+    width: 20%;
+    height: 35px;
+    margin-top: 1%;
+    background-color: #F8E080;
+    border: none;
+    color: #122328 !important;
+    z-index: 30 !important;
+    border: 2px solid #F8AC6A;
+
+}
+.fl{
+    margin-left: 35%;
+}
+.sl{
+    margin-left: 45%;
+}
+.tl{
+    margin-left: 55%;
+}
+.ftl{
+    margin-left: 65%;
+}
+.ffl{
+    margin-left: 75%;
+}
+.main-row{
+    text-align: center;
+}
+.main-row button{
+    font-size: 20px;
+    height: 35px;
+}
+.fr{
+    margin-left: 45%;
+}
+.sr{
+    margin-left: 35%;
+}
+.tr{
+    margin-left: 25%;
+}
+.ftr{
+margin-left: 15%;
+}
+.ffr{
+    margin-left: 5%
+}
+.logo{
+    height: 75%;
+    width: 50%;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    opacity: 50%;
+    z-index: -10 !important;
+
+    }
+    .guessed{
+        background-color: #F8AC6A !important ;
+    }
+.timer{
+    position: absolute;
+    top: 2%;
+    left: 1%
+}
+.finalGuessed{
+    background-color: #fca55a !important ;
+}

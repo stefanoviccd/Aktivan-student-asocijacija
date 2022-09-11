@@ -1,0 +1,30 @@
+ h2{
+    margin-left: 1%;
+}
+
+.timer-btn{
+    width: 120px;
+    margin-top: 26%;
+    margin-left: 2px;
+    background-color: rgb(68,151,141);
+    border: 1px solid  rgba(39,77,90,1);
+}
+.reset-timer-btn{
+    width: 120px;
+    margin-left: 2px;
+    background-color: rgb(68,151,141);
+    border: 1px solid  rgba(39,77,90,1);
+}
+.timesUp{
+    position: absolute;
+    left: 610px;
+    top:300px;
+    width:350px;
+    height: 200px;
+    background-color:  rgb(68,151,141);
+    text-align: center;
+    font-size: 50px;
+    z-index: 50;
+    border: 2px solid  rgba(39,77,90,1);
+    padding-top: 3%
+}
