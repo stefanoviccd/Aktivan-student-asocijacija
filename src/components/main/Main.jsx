@@ -18,6 +18,10 @@ function AS() {
     <button><Link  className='link' to="/asocijacija7"> Asocijacija 7</Link></button>
     <button><Link  className='link' to="/asocijacija8"> Asocijacija 8</Link></button>
     <button><Link  className='link' to="/asocijacija9"> Asocijacija 9</Link></button></div>
+    <div className='grid-div'>
+    <button><Link  className='link' to="/asocijacija10"> Asocijacija 10</Link></button>
+    <button><Link  className='link' to="/asocijacija11"> Asocijacija 11</Link></button>
+    <button><Link  className='link' to="/asocijacija12"> Asocijacija 12</Link></button></div>
     <img className='logo' src='./logo.jpeg'></img></>
 
 

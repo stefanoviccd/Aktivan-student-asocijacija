@@ -5,6 +5,12 @@ import Timer from '../timer/Timer';
 import Confettes from '../confetti/Confettes';
 
 function Association(props) {
+    const [gameStarted, setGameStarted]=useState(false)
+    const startGame=function(e){
+        e.preventDefault()
+        setGameStarted(true)
+        console.log("Is game started: "+gameStarted)
+    }
 
     const handleAFieldClick=function(e, num){
         e.preventDefault()
@@ -207,6 +213,7 @@ function Association(props) {
         setBtnClassC("")
         setBtnClassD("")
         setIsWinner(false)
+        setGameStarted(false)
       }
 
   return (
@@ -214,49 +221,49 @@ function Association(props) {
     <> 
     { showConfetti ? <Confettes></Confettes> : <></>}
     <div className='timer'>
-        <Timer removeConfettes={removeConfettes} getShowDialog={getShowDialog} isWinner={isWinner} resetFields={resetFields}></Timer></div>
+        <Timer removeConfettes={removeConfettes} getShowDialog={getShowDialog} isWinner={isWinner} resetFields={resetFields} startGame={startGame}></Timer></div>
     <div className='first-row'>
-        <button className='fl' onClick={e=>handleAFieldClick(e,4)}>{a4}</button>
-        <button className='fr' onClick={e=>handleBFieldClick(e,4)}>{b4}</button>
+        <button className='fl' onClick={e=>handleAFieldClick(e,4)} disabled={!gameStarted}>{a4}</button>
+        <button className='fr' onClick={e=>handleBFieldClick(e,4)} disabled={!gameStarted}>{b4}</button>
     </div>
     <div className='second-row'>
-        <button className='sl' onClick={e=>handleAFieldClick(e,3)}>{a3}</button>
-        <button  className='sr' onClick={e=>handleBFieldClick(e,3)}>{b3}</button>
+        <button className='sl' onClick={e=>handleAFieldClick(e,3)} disabled={!gameStarted}>{a3}</button>
+        <button  className='sr' onClick={e=>handleBFieldClick(e,3)} disabled={!gameStarted}>{b3}</button>
     </div>
     <div className='third-row'>
-        <button className='tl' onClick={e=>handleAFieldClick(e,2)}>{a2}</button>
-        <button  className='tr' onClick={e=>handleBFieldClick(e,2)}>{b2}</button>
+        <button className='tl' onClick={e=>handleAFieldClick(e,2)} disabled={!gameStarted}>{a2}</button>
+        <button  className='tr' onClick={e=>handleBFieldClick(e,2)} disabled={!gameStarted}>{b2}</button>
     </div>
     <div className='fourth-row'>
-        <button className='ftl' onClick={e=>handleAFieldClick(e,1)}>{a1}</button>
-        <button className='ftr' onClick={e=>handleBFieldClick(e,1)}>{b1}</button>
+        <button className='ftl' onClick={e=>handleAFieldClick(e,1)} disabled={!gameStarted}>{a1}</button>
+        <button className='ftr' onClick={e=>handleBFieldClick(e,1)} disabled={!gameStarted}>{b1}</button>
     </div>
     <div className='fifth-row'>
-        <button  className={btnClassA+' ffl'} onClick={e =>handleAClick(e)}>{a}</button>
-        <button  className={btnClassB+' ffr'} onClick={e =>handleBClick(e)}>{b}</button>
+        <button  className={btnClassA+' ffl'} onClick={e =>handleAClick(e)} disabled={!gameStarted}>{a}</button>
+        <button  className={btnClassB+' ffr'} onClick={e =>handleBClick(e)} disabled={!gameStarted}>{b}</button>
     </div>
     <div className='main-row'>
-        <button  className={finalButtonClass}  onClick={e =>handleFinalAnswerGuessed(e)}>{finalGuess}</button>
+        <button  className={finalButtonClass}  onClick={e =>handleFinalAnswerGuessed(e)} disabled={!gameStarted}>{finalGuess}</button>
     </div>
     <div className='fifth-row'>
-        <button className={btnClassC+' ffl'} onClick={e =>handleCClick(e)}>{c}</button>
-        <button className={btnClassD+' ffr'} onClick={e =>handleDClick(e)}>{d}</button>
+        <button className={btnClassC+' ffl'} onClick={e =>handleCClick(e)} disabled={!gameStarted}>{c}</button>
+        <button className={btnClassD+' ffr'} onClick={e =>handleDClick(e)} disabled={!gameStarted}>{d}</button>
     </div>
     <div className='fourth-row'>
-        <button className='ftl' onClick={e=>handleCFieldClick(e,1)}>{c1}</button>
-        <button  className='ftr' onClick={e=>handleDFieldClick(e,1)}>{d1}</button>
+        <button className='ftl' onClick={e=>handleCFieldClick(e,1)} disabled={!gameStarted}>{c1}</button>
+        <button  className='ftr' onClick={e=>handleDFieldClick(e,1)} disabled={!gameStarted}>{d1}</button>
     </div>
     <div className='third-row'>
-        <button className='tl' onClick={e=>handleCFieldClick(e,2)}>{c2}</button>
-        <button  className='tr' onClick={e=>handleDFieldClick(e,2)}>{d2}</button>
+        <button className='tl' onClick={e=>handleCFieldClick(e,2)} disabled={!gameStarted}>{c2}</button>
+        <button  className='tr' onClick={e=>handleDFieldClick(e,2)} disabled={!gameStarted}>{d2}</button>
     </div>
     <div className='second-row'>
-        <button className='sl' onClick={e=>handleCFieldClick(e,3)}>{c3}</button>
-        <button  className='sr' onClick={e=>handleDFieldClick(e,3)}>{d3}</button>
+        <button className='sl' onClick={e=>handleCFieldClick(e,3)} disabled={!gameStarted}>{c3}</button>
+        <button  className='sr' onClick={e=>handleDFieldClick(e,3)} disabled={!gameStarted}>{d3}</button>
     </div>
     <div className='first-row'>
-        <button className='fl' onClick={e=>handleCFieldClick(e,4)}>{c4}</button>
-        <button className='fr' onClick={e=>handleDFieldClick(e,4)}>{d4}</button>
+        <button className='fl' onClick={e=>handleCFieldClick(e,4)} disabled={!gameStarted}>{c4}</button>
+        <button className='fr' onClick={e=>handleDFieldClick(e,4)} disabled={!gameStarted}>{d4}</button>
     </div>
     <img className='logo' src='./logo.jpeg'></img>
     </>

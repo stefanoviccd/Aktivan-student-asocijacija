@@ -102,13 +102,14 @@ const Timer = (props) => {
 	}
 
 
-	const onClickReset = () => {
+	const onClickReset = (e) => {
+		props.startGame(e)
 		clearTimer(getDeadTime());
 	}
 
 	return (
 		<><div className="App">
-            <h2>{timer} <button className='timer-btn' onClick={onClickReset}>Započni igru</button>
+            <h2>{timer} <button className='timer-btn' onClick={(e)=>onClickReset(e)}>Započni igru</button>
             </h2>
             <button className='reset-timer-btn' onClick={resetTimer}>Resetuj</button>
 			
