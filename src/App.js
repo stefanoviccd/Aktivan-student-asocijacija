@@ -349,6 +349,36 @@ function App() {
     d: "Signal",
   }
 
+  const colA12={
+    a1: "Talas",
+    a2: "Mali",
+    a3: "Jedinica mere",
+    a4: "Veličina",
+    a: "Mikro",
+  }
+  const colB12={
+    b1: "8",
+    b2: "Jezgro",
+    b3: "Kompjuter",
+    b4: "Mozak",
+    b: "Procesor",
+
+  }
+  const colC12={
+    c1: "Virus",
+    c2: "Injekcija",
+    c3: "Karantin",
+    c4: "Pasoš",
+    c: "Covid",
+
+  }
+  const colD12={
+    d1: "Keš",
+    d2: "USB",
+    d3: "Demencija",
+    d4: "Gigabajt",
+    d: "Memorija",
+  }
   
   return (
     <>
@@ -368,7 +398,7 @@ function App() {
         <Route path="/asocijacija9" element={<Association colA={colA9} colB={colB9} colC={colC9} colD={colD9} guess={"MEMORIJA"}></Association>}></Route>
         <Route path="/asocijacija10" element={<Association colA={colA10} colB={colB10} colC={colC10} colD={colD10} guess={"PETLJA"}></Association>}></Route>
         <Route path="/asocijacija11" element={<Association colA={colA11} colB={colB11} colC={colC11} colD={colD11} guess={"DIGITALIZACIJA"}></Association>}></Route>
-      {/*<Route path="/asocijacija12" element={<Association colA={colA12} colB={colB12} colC={colC12} colD={colD12} guess={""}></Association>}></Route>*/}
+      <Route path="/asocijacija12" element={<Association colA={colA12} colB={colB12} colC={colC12} colD={colD12} guess={"ČIP"}></Association>}></Route>
       </Routes>
     </BrowserRouter>
       </>
